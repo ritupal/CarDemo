@@ -1,8 +1,8 @@
 //
 //  String+Localizable.swift
-//  VIP_demo
+//  Car Demo
 //
-//  Created by Borja Saez de Guinoa Vilaplana on 02/01/2021.
+//  Created by Kumari Ritu Pal on 28/07/22.
 //
 
 import Foundation

@@ -153,7 +153,6 @@
 				A07F9FFE2892F401000C3100 /* Components */,
 				A07F9FF92892F401000C3100 /* Constants */,
 				A07F9FFC2892F401000C3100 /* Extensions */,
-				A07F9FFB2892F401000C3100 /* Network */,
 				A07F9FFA2892F401000C3100 /* Resources */,
 				A07F9FF72892F401000C3100 /* Scenes */,
 				A07F9FD52892F23F000C3100 /* Info.plist */,
@@ -184,18 +183,10 @@
 			children = (
 				A07FA01F2892FC94000C3100 /* CardList */,
 				A07FA00A2892F70E000C3100 /* TabBarController */,
-				A07F9FF82892F401000C3100 /* Dashboard */,
 				A07F9FCD2892F23E000C3100 /* Main.storyboard */,
 				A07F9FD22892F23F000C3100 /* LaunchScreen.storyboard */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		A07F9FF82892F401000C3100 /* Dashboard */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Dashboard;
 			sourceTree = "<group>";
 		};
 		A07F9FF92892F401000C3100 /* Constants */ = {
@@ -213,13 +204,6 @@
 				A07FA0092892F500000C3100 /* Localizable.strings */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		A07F9FFB2892F401000C3100 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		A07F9FFC2892F401000C3100 /* Extensions */ = {
@@ -243,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				A07F9FFF2892F401000C3100 /* UI */,
-				A07FA0002892F401000C3100 /* Utils */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -255,13 +238,6 @@
 				A07FA00D2892FA3D000C3100 /* BaseViewController.swift */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		A07FA0002892F401000C3100 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		A07FA00A2892F70E000C3100 /* TabBarController */ = {
