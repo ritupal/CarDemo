@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  CarDemo
+
+  Created by Kumari Ritu Pal on 28/07/22.
+  
+*/
+
+//MARK: Dashboard titles
+"dashboard_title" = "Dashboard";
+
+//MARK: Tabbar titles
+"tabbar_item_map" = "Map";
+"tabbar_item_list" = "List";
+
+//MARK: Progress Hud
+"loading" = "Loading";
