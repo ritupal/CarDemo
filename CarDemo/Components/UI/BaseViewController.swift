@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import  ProgressHUD
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, StoryboardHelper {
     
     //MARK:- View Life Cycle
     override func viewDidLoad() {

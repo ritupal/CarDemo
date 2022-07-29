@@ -26,6 +26,9 @@
 		A07FA0272892FCFB000C3100 /* CarListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07FA0262892FCFB000C3100 /* CarListRouter.swift */; };
 		A07FA02A2892FD1C000C3100 /* CarListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07FA0292892FD1C000C3100 /* CarListBuilder.swift */; };
 		A07FA02F2892FE1B000C3100 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07FA02E2892FE1B000C3100 /* CustomNavigationController.swift */; };
+		A07FA03428939AA6000C3100 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07FA03328939AA6000C3100 /* Identifiable.swift */; };
+		A07FA03628939B35000C3100 /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07FA03528939B35000C3100 /* StoryboardHelper.swift */; };
+		A07FA03B2893A262000C3100 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07FA03A2893A262000C3100 /* MapViewController.swift */; };
 		D34D05B26530FA7F16006D9C /* Pods_CarDemo_CarDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6031756CC7B3D2D7C1671904 /* Pods_CarDemo_CarDemoUITests.framework */; };
 		E30384894B922A89685A117F /* Pods_CarDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E265E619399FCEFE68E1A6 /* Pods_CarDemo.framework */; };
 /* End PBXBuildFile section */
@@ -76,6 +79,9 @@
 		A07FA0262892FCFB000C3100 /* CarListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListRouter.swift; sourceTree = "<group>"; };
 		A07FA0292892FD1C000C3100 /* CarListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListBuilder.swift; sourceTree = "<group>"; };
 		A07FA02E2892FE1B000C3100 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		A07FA03328939AA6000C3100 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		A07FA03528939B35000C3100 /* StoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
+		A07FA03A2893A262000C3100 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A53E4681A30A6B04B8C05166 /* Pods-CarDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarDemo.release.xcconfig"; path = "Target Support Files/Pods-CarDemo/Pods-CarDemo.release.xcconfig"; sourceTree = "<group>"; };
 		AB44E46A12ACB10F721FF68A /* Pods_CarDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E265E619399FCEFE68E1A6 /* Pods_CarDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +187,7 @@
 		A07F9FF72892F401000C3100 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A07FA0392893A257000C3100 /* Map */,
 				A07FA01F2892FC94000C3100 /* CardList */,
 				A07FA00A2892F70E000C3100 /* TabBarController */,
 				A07F9FCD2892F23E000C3100 /* Main.storyboard */,
@@ -210,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				A07FA0032892F4CC000C3100 /* String+Localizable.swift */,
+				A07FA03528939B35000C3100 /* StoryboardHelper.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -226,6 +234,7 @@
 		A07F9FFE2892F401000C3100 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A07FA03228939A9A000C3100 /* Utils */,
 				A07F9FFF2892F401000C3100 /* UI */,
 			);
 			path = Components;
@@ -274,6 +283,22 @@
 				A07FA02E2892FE1B000C3100 /* CustomNavigationController.swift */,
 			);
 			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		A07FA03228939A9A000C3100 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A07FA03328939AA6000C3100 /* Identifiable.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A07FA0392893A257000C3100 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				A07FA03A2893A262000C3100 /* MapViewController.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		CFCBED94C7F231F155763B56 /* Frameworks */ = {
@@ -531,11 +556,14 @@
 				A07FA00C2892F728000C3100 /* MainTabbarController.swift in Sources */,
 				A07FA0212892FCB4000C3100 /* CarListViewController.swift in Sources */,
 				A07FA0022892F426000C3100 /* Constants.swift in Sources */,
+				A07FA03428939AA6000C3100 /* Identifiable.swift in Sources */,
 				A07FA0042892F4CC000C3100 /* String+Localizable.swift in Sources */,
 				A07FA00E2892FA3D000C3100 /* BaseViewController.swift in Sources */,
 				A07FA0232892FCD4000C3100 /* CarListInteractor.swift in Sources */,
 				A07FA0252892FCE2000C3100 /* CarListPresenter.swift in Sources */,
 				A07FA02A2892FD1C000C3100 /* CarListBuilder.swift in Sources */,
+				A07FA03628939B35000C3100 /* StoryboardHelper.swift in Sources */,
+				A07FA03B2893A262000C3100 /* MapViewController.swift in Sources */,
 				A07FA0272892FCFB000C3100 /* CarListRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
