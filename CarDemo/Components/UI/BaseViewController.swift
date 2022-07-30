@@ -27,7 +27,7 @@ class BaseViewController: UIViewController, StoryboardHelper {
     
     //MARK:- Progress hud functions
     func showSpinner() {
-        ProgressHUD.show(Constants.loading)
+        ProgressHUD.show()
     }
     
     func hideSpinner() {

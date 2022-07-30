@@ -27,10 +27,13 @@ class MainTabbarController: UITabBarController {
         let mapVC: MapViewController = MapViewController.instantiate(MapViewController.self)
         mapVC.tabBarItem =  UITabBarItem.init(title: Constants.TabbarTitles.map , image: UIImage(systemName: "map"), tag: 0)
         let mapNavVC = CustomNavigationController.init(rootViewController: mapVC)
+        mapNavVC.setNavBarTitle(title: Constants.TabbarTitles.map)
         
         let carListVC: CarListViewController = CarListViewController.instantiate(CarListViewController.self)
         carListVC.tabBarItem =  UITabBarItem.init(title: Constants.TabbarTitles.list , image: UIImage(systemName: "list.bullet"), tag: 0)
         let listNavVC = CustomNavigationController.init(rootViewController: carListVC)
+        listNavVC.setNavBarTitle(title: Constants.TabbarTitles.list)
+        
         let tabBarList = [mapNavVC, listNavVC]
 
         viewControllers = tabBarList

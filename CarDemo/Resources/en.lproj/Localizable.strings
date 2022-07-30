@@ -13,5 +13,7 @@
 "tabbar_item_map" = "Map";
 "tabbar_item_list" = "List";
 
-//MARK: Progress Hud
-"loading" = "Loading";
+//MARK: Fuel Name
+"diesel" = "Diesel";
+"petrol" = "Petrol";
+"electric" = "Electric";

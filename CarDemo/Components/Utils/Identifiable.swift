@@ -16,3 +16,12 @@ extension Identifiable where Self: UIView {
         return String(describing: self)
     }
 }
+
+internal protocol TableCellConfigProtocol {
+    func dequeueCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    func configureCell(_ cell: UITableViewCell, withItem item: Any)
+}
+
+internal protocol TableCellConfigItemProtocol {
+    var cellConfigure: TableCellConfigProtocol { get }
+}

@@ -8,17 +8,21 @@
 import UIKit
 
 class CustomNavigationController: UINavigationController {
-
     override func viewDidLoad() {
         setupStyle()
     }
     
-    private func setupStyle(){
+    private func setupStyle() {
         self.navigationBar.barStyle = Constants.Styles.tabbarStyleColor
         self.navigationBar.isTranslucent = false
+        self.navigationBar.isHidden = false
         self.navigationBar.tintColor = Constants.Styles.mainColor
         let textAttributes = [NSAttributedString.Key.foregroundColor:Constants.Styles.mainColor]
         self.navigationBar.titleTextAttributes = textAttributes
+    }
+    
+    func setNavBarTitle(title: String) {
+        self.navigationBar.topItem?.title = title
     }
 
 }
