@@ -6,8 +6,9 @@
   
 */
 
-//MARK: Dashboard titles
-"dashboard_title" = "Dashboard";
+//MARK: EmptyState descriptions
+"map_empty" = "We couldn't find any cars, Please try again.";
+"list_empty" = "We couldn't find any vehicles, Please try again.";
 
 //MARK: Tabbar titles
 "tabbar_item_map" = "Map";

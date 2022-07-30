@@ -47,6 +47,8 @@
 		A0B41BD12895218A00E6CE39 /* LazyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B41BD02895218A00E6CE39 /* LazyImageView.swift */; };
 		A0B41BD42895269300E6CE39 /* CarListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B41BD32895269300E6CE39 /* CarListViewModel.swift */; };
 		A0B41BD628952E9D00E6CE39 /* Uiview+Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B41BD528952E9D00E6CE39 /* Uiview+Main.swift */; };
+		A0B41BDA2895A56200E6CE39 /* EmptyStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B41BD92895A56200E6CE39 /* EmptyStateViewModel.swift */; };
+		A0B41BDC2895A7DA00E6CE39 /* EmptyStateEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B41BDB2895A7DA00E6CE39 /* EmptyStateEnum.swift */; };
 		D34D05B26530FA7F16006D9C /* Pods_CarDemo_CarDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6031756CC7B3D2D7C1671904 /* Pods_CarDemo_CarDemoUITests.framework */; };
 		E30384894B922A89685A117F /* Pods_CarDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E265E619399FCEFE68E1A6 /* Pods_CarDemo.framework */; };
 /* End PBXBuildFile section */
@@ -118,6 +120,8 @@
 		A0B41BD02895218A00E6CE39 /* LazyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyImageView.swift; sourceTree = "<group>"; };
 		A0B41BD32895269300E6CE39 /* CarListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewModel.swift; sourceTree = "<group>"; };
 		A0B41BD528952E9D00E6CE39 /* Uiview+Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Uiview+Main.swift"; sourceTree = "<group>"; };
+		A0B41BD92895A56200E6CE39 /* EmptyStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateViewModel.swift; sourceTree = "<group>"; };
+		A0B41BDB2895A7DA00E6CE39 /* EmptyStateEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateEnum.swift; sourceTree = "<group>"; };
 		A53E4681A30A6B04B8C05166 /* Pods-CarDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarDemo.release.xcconfig"; path = "Target Support Files/Pods-CarDemo/Pods-CarDemo.release.xcconfig"; sourceTree = "<group>"; };
 		AB44E46A12ACB10F721FF68A /* Pods_CarDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E265E619399FCEFE68E1A6 /* Pods_CarDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,6 +288,7 @@
 				A07FA02B2892FDE5000C3100 /* NavigationController */,
 				A07FA00D2892FA3D000C3100 /* BaseViewController.swift */,
 				A0B41BD02895218A00E6CE39 /* LazyImageView.swift */,
+				A0B41BD92895A56200E6CE39 /* EmptyStateViewModel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 			children = (
 				A07FA03328939AA6000C3100 /* Identifiable.swift */,
 				A0B41BCC2895197F00E6CE39 /* DataManager.swift */,
+				A0B41BDB2895A7DA00E6CE39 /* EmptyStateEnum.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -711,6 +717,7 @@
 			files = (
 				A07FA02F2892FE1B000C3100 /* CustomNavigationController.swift in Sources */,
 				A07F9FC82892F23E000C3100 /* AppDelegate.swift in Sources */,
+				A0B41BDC2895A7DA00E6CE39 /* EmptyStateEnum.swift in Sources */,
 				A07F9FCA2892F23E000C3100 /* SceneDelegate.swift in Sources */,
 				A07FA00C2892F728000C3100 /* MainTabbarController.swift in Sources */,
 				A07FA0462893D549000C3100 /* APIHandler.swift in Sources */,
@@ -718,6 +725,7 @@
 				A07FA0422893D24B000C3100 /* APIEnvironment.swift in Sources */,
 				A0B41BD42895269300E6CE39 /* CarListViewModel.swift in Sources */,
 				A07FA060289418B4000C3100 /* CarListCellViewModel.swift in Sources */,
+				A0B41BDA2895A56200E6CE39 /* EmptyStateViewModel.swift in Sources */,
 				A07FA0532893EE6D000C3100 /* MapPresenter.swift in Sources */,
 				A07FA04C2893D703000C3100 /* APILoader.swift in Sources */,
 				A07FA0022892F426000C3100 /* Constants.swift in Sources */,

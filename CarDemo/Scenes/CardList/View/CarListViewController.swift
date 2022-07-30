@@ -14,25 +14,30 @@ import UIKit
 
 protocol CarListDisplayLogic: AnyObject {
     func loadVehicleList(viewModel: CarListViewModel)
-    func showEmptyView()
+    func showEmptyView(viewModel: EmptyStateViewModel)
 }
 
 class CarListViewController: BaseViewController {
     
+    // MARK:- IBOutlets
+    @IBOutlet weak var errorView: UIView!
+    @IBOutlet weak var lblErrorMsg: UILabel!
+    @IBOutlet weak var errorImageView: UIImageView!
     @IBOutlet weak var tableViewVehicle: UITableView!
-    // MARK: Variables
+    
+    // MARK:- Variables
     private var vehicleList: [TableCellConfigItemProtocol] = []
     
     var interactor: CarListBusinessLogic?
     
-    // MARK: View lifecycle
+    // MARK:- View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         getCarList()
     }
     
-    // MARK: Setup
+    // MARK:- Setup
     private func setup() {
         let viewController = self
         let interactor = CarListInteractor()
@@ -41,6 +46,7 @@ class CarListViewController: BaseViewController {
         interactor.presenter = presenter
         presenter.viewController = viewController
         setupTableView()
+        self.setViewVisibility(isError: false)
     }
     
     // MARK:- Functions
@@ -58,6 +64,18 @@ class CarListViewController: BaseViewController {
         self.vehicleList = viewModel.vehicleList
         tableViewVehicle.reloadData()
     }
+    
+    private func setErrorViewData(viewModel: EmptyStateViewModel) {
+        self.setViewVisibility(isError: true)
+        self.errorImageView.image = viewModel.emptyState.emptyImage
+        self.lblErrorMsg.text = viewModel.emptyState.description
+    }
+    
+    private func setViewVisibility(isError: Bool) {
+        self.errorView.isHidden = !isError
+        self.tableViewVehicle.isHidden = isError
+    }
+    
 }
 
 extension CarListViewController: CarListDisplayLogic {
@@ -67,8 +85,9 @@ extension CarListViewController: CarListDisplayLogic {
         loadDataInTableView(viewModel: viewModel)
     }
     
-    func showEmptyView() {
+    func showEmptyView(viewModel: EmptyStateViewModel){
         hideSpinner()
+        self.setErrorViewData(viewModel: viewModel)
     }
 }
 

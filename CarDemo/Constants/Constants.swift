@@ -15,8 +15,15 @@ struct Constants {
         static let list = "tabbar_item_list".localized()
     }
     
-    struct Dashboard {
-        static let title = "dashboard_title".localized()
+    struct EmptyState {
+        struct descriptions {
+            static let map: String = "map_empty".localized()
+            static let list: String = "list_empty".localized()
+        }
+        struct images {
+            static let map: UIImage? = UIImage(named: "empty_state")
+            static let list: UIImage? = UIImage(named: "empty_state")
+        }
     }
     
     struct Styles {

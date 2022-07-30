@@ -32,6 +32,7 @@ extension CarListPresenter: CarListPresentationLogic {
     }
     
     func onCarListFetchFailed() {
-        viewController?.showEmptyView()
+        let viewModel = EmptyStateViewModel(emptyState: .list)
+        viewController?.showEmptyView(viewModel: viewModel)
     }
 }
