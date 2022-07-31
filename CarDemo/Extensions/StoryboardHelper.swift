@@ -7,6 +7,7 @@
 
 import UIKit
 
+// This enum is to get the storyboard
 enum StoryboardName: String {
     case main = "Main"
     
@@ -19,6 +20,7 @@ enum StoryboardName: String {
     }
 }
 
+// This protocol is to instantiate the view controller of the storybard
 protocol StoryboardHelper {
     static func instantiate<T: UIViewController>(_ type: T.Type, storyboard storyboardName: StoryboardName, identifier: String?, isPad: Bool?) -> T
 }

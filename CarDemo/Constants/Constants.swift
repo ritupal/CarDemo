@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// This is constant file which is used in whole project
 struct Constants {
     
     struct TabbarTitles {

@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+/// This protocol is used to get the reuseIdentifier of the cell
 protocol Identifiable {
     static var reuseIdentifier: String {get}
 }
@@ -17,6 +19,8 @@ extension Identifiable where Self: UIView {
     }
 }
 
+
+/// This is used to give common function for deque cell and configue the cell
 internal protocol TableCellConfigProtocol {
     func dequeueCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     func configureCell(_ cell: UITableViewCell, withItem item: Any)

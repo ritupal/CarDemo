@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// This is used to hit the api on the server using urlsession
 struct APILoader<T: APIHandler> {
     var apiHandler: T
     var session: URLSession

@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import  ProgressHUD
 
+/// This is base view controller in which we write the common functions which we need in all controllers like show alert or show spinner
 class BaseViewController: UIViewController, StoryboardHelper {
     
     //MARK:- View Life Cycle

@@ -60,17 +60,23 @@ class CarListViewController: BaseViewController {
         self.tableViewVehicle.delegate = self
     }
     
+    /// This function is to load the car data in table view
+    /// - Parameter viewModel: car list view model
     private func loadDataInTableView(viewModel: CarListViewModel) {
         self.vehicleList = viewModel.vehicleList
         tableViewVehicle.reloadData()
     }
     
+    /// This function is to set the empty data
+    /// - Parameter viewModel: empty state view model
     private func setErrorViewData(viewModel: EmptyStateViewModel) {
         self.setViewVisibility(isError: true)
         self.errorImageView.image = viewModel.emptyState.emptyImage
         self.lblErrorMsg.text = viewModel.emptyState.description
     }
     
+    /// this function is to set the visiblity of table view and error view
+    /// - Parameter isError: bool
     private func setViewVisibility(isError: Bool) {
         self.errorView.isHidden = !isError
         self.tableViewVehicle.isHidden = isError

@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// This enum is used to empty view'd description and image where is no data on the screen.
 enum EmptyState {
     case map
     case list

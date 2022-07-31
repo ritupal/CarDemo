@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 
+/// This protocol is used to set data on the view.
 protocol MapDisplayLogic: AnyObject {
     func loadCarListOnMapView(viewModel: [MapViewModel])
     func showEmptyStateView()
@@ -40,7 +41,11 @@ class MapViewController: BaseViewController {
     }
     
     //MARK:- Map Functions
+    
+    /// This function is for seting car data on map
+    /// - Parameter list: map view model
     private func showCarListOnMap(list: [MapViewModel]) {
+        if list.count == 0 { return }
         DispatchQueue.main.async {
             
             for vehicle in list {
@@ -51,9 +56,9 @@ class MapViewController: BaseViewController {
             }
             self.setMapCenter()
         }
-        
     }
     
+    /// This functions is for setting the center of the map with a region of all the annotations
     private func setMapCenter() {
         if mapView.annotations.count  == 0 { return }
         var topLeft = CLLocationCoordinate2D(latitude:-90.0, longitude: 180.0)

@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// This class is used to load the image url in the imahe view
 class LazyImageView : UIImageView {
     
     private let imageCache = NSCache<AnyObject, UIImage>()

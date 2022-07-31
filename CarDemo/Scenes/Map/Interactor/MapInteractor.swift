@@ -7,11 +7,12 @@
 
 import Foundation
 
+/// This protocol is used to do all the buisness logic
 protocol MapBuisnessLogic {
     func fetchCars()
 }
-protocol MapDataStore
-{
+
+protocol MapDataStore {
     var carList: [CarResponseModel] { get }
 }
 

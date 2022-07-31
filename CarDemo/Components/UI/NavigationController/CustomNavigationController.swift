@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// This is custom navigation controller in which all the controllers stacks up
 class CustomNavigationController: UINavigationController {
     override func viewDidLoad() {
         setupStyle()
