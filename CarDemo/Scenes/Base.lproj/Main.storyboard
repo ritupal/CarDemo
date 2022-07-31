@@ -1,27 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Car List View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="CarListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="CarListViewController" customModule="CarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MapViewController" customModule="CarDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZvZ-YC-n8M">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MGy-Bm-aDY">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                    </mapView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="MGy-Bm-aDY" secondAttribute="bottom" id="Epr-lx-73y"/>
+                                    <constraint firstItem="MGy-Bm-aDY" firstAttribute="top" secondItem="ZvZ-YC-n8M" secondAttribute="top" id="L5h-6h-hxq"/>
+                                    <constraint firstItem="MGy-Bm-aDY" firstAttribute="leading" secondItem="ZvZ-YC-n8M" secondAttribute="leading" id="XME-l3-WgP"/>
+                                    <constraint firstAttribute="trailing" secondItem="MGy-Bm-aDY" secondAttribute="trailing" id="unx-O5-gOz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZvZ-YC-n8M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1qb-OB-9wB"/>
+                            <constraint firstItem="ZvZ-YC-n8M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RaU-HM-pZM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZvZ-YC-n8M" secondAttribute="trailing" id="qzF-aX-isq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZvZ-YC-n8M" secondAttribute="bottom" id="yb7-xu-kyo"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="MGy-Bm-aDY" id="MgG-lv-ILr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97" y="70"/>
+            <point key="canvasLocation" x="95.652173913043484" y="69.642857142857139"/>
+        </scene>
+        <!--Car List View Controller-->
+        <scene sceneID="ddY-hT-BMq">
+            <objects>
+                <viewController storyboardIdentifier="CarListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kWY-ui-cje" customClass="CarListViewController" customModule="CarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="saq-nX-p56">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MZb-Wj-8Tp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hhm-1J-f8r">
+                                        <rect key="frame" x="16" y="437.5" width="382" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="meo-9w-JYw">
+                                        <rect key="frame" x="157" y="313.5" width="100" height="100"/>
+                                        <color key="tintColor" red="0.92941176469999998" green="0.43137254899999999" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Law-gg-Qeg"/>
+                                            <constraint firstAttribute="width" constant="100" id="qZ6-t7-vgG"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Hhm-1J-f8r" firstAttribute="centerY" secondItem="MZb-Wj-8Tp" secondAttribute="centerY" id="3Ru-Re-NWL"/>
+                                    <constraint firstItem="Hhm-1J-f8r" firstAttribute="leading" secondItem="MZb-Wj-8Tp" secondAttribute="leading" constant="16" id="Mkq-At-Okm"/>
+                                    <constraint firstItem="Hhm-1J-f8r" firstAttribute="top" secondItem="meo-9w-JYw" secondAttribute="bottom" constant="24" id="iX5-NP-9V7"/>
+                                    <constraint firstItem="meo-9w-JYw" firstAttribute="centerX" secondItem="Hhm-1J-f8r" secondAttribute="centerX" id="vWM-Lq-HXk"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hhm-1J-f8r" secondAttribute="trailing" constant="16" id="zjb-PC-qcd"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CIJ-od-AsM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E4w-bB-Dix"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CIJ-od-AsM" firstAttribute="leading" secondItem="E4w-bB-Dix" secondAttribute="leading" id="NxL-Uq-8TE"/>
+                            <constraint firstItem="E4w-bB-Dix" firstAttribute="trailing" secondItem="CIJ-od-AsM" secondAttribute="trailing" id="Wnn-P4-mU9"/>
+                            <constraint firstItem="MZb-Wj-8Tp" firstAttribute="top" secondItem="saq-nX-p56" secondAttribute="top" id="eof-OI-D3c"/>
+                            <constraint firstItem="E4w-bB-Dix" firstAttribute="bottom" secondItem="CIJ-od-AsM" secondAttribute="bottom" id="gcy-Fp-LBk"/>
+                            <constraint firstAttribute="bottom" secondItem="MZb-Wj-8Tp" secondAttribute="bottom" id="hQJ-8p-PMq"/>
+                            <constraint firstItem="MZb-Wj-8Tp" firstAttribute="leading" secondItem="E4w-bB-Dix" secondAttribute="leading" id="pVi-hY-Ewa"/>
+                            <constraint firstItem="CIJ-od-AsM" firstAttribute="top" secondItem="E4w-bB-Dix" secondAttribute="top" id="rHP-VA-bVb"/>
+                            <constraint firstItem="MZb-Wj-8Tp" firstAttribute="trailing" secondItem="E4w-bB-Dix" secondAttribute="trailing" id="yEh-DY-Tlg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="errorImageView" destination="meo-9w-JYw" id="fHM-eh-9da"/>
+                        <outlet property="errorView" destination="MZb-Wj-8Tp" id="PFe-kk-Nk4"/>
+                        <outlet property="lblErrorMsg" destination="Hhm-1J-f8r" id="UlD-wo-0la"/>
+                        <outlet property="tableViewVehicle" destination="CIJ-od-AsM" id="Q34-5P-BgF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kqh-OF-Ijd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="747" y="50"/>
         </scene>
     </scenes>
     <resources>

@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 import  ProgressHUD
 
-class BaseViewController: UIViewController {
+/// This is base view controller in which we write the common functions which we need in all controllers like show alert or show spinner
+class BaseViewController: UIViewController, StoryboardHelper {
     
     //MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -27,7 +28,7 @@ class BaseViewController: UIViewController {
     
     //MARK:- Progress hud functions
     func showSpinner() {
-        ProgressHUD.show(Constants.loading)
+        ProgressHUD.show()
     }
     
     func hideSpinner() {
