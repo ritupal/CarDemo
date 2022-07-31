@@ -23,7 +23,6 @@ struct APILoader<T: APIHandler> {
                 if let httpResponse = response as? HTTPURLResponse {
                     let serviceError = ServiceError(httpStatus: httpResponse.statusCode, message: "Service Error \(error?.localizedDescription ?? "Unknown error")")
                     guard error == nil else {
-                        //TODO: make constant of errors
                         completionHandler(nil, serviceError)
                         return
                     }
